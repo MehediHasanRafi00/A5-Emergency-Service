@@ -75,14 +75,14 @@
         </div>
       </section>
     </header>
-    <main class="bg-[#f5fff6] ">
+    <main class="bg-[#f5fff6]">
       <!-- Main Section -->
       <section
         class="w-11/12 mx-auto pt-12 grid grid-cols-1 md:grid-cols-12 gap-7.5 pb-22"
       >
         <section class="md:col-span-9">
           <!-- card-container -->
-          <div class="grid grid-cols-1 gap-7.5 md:grid-cols-3">
+          <div id="card-container" class="grid grid-cols-1 gap-7.5 md:grid-cols-3 ">
             <!-- card  -->
             <div
               class="bg-white p-8 rounded-xl shadow-[0px_2px_3px_0px_#00000026]"
@@ -91,7 +91,7 @@
                 <figure class="p-3.5 rounded-2xl bg-[#FFE3E2]">
                   <img class="w-8" src="./assets/emergency.png" alt="" />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">জাতীয় জরুরি সেবা</h2>
               <p class="text-lg text-[#5c5c5c]">National Emergency</p>
@@ -125,7 +125,7 @@
                 <figure class="p-3.5 rounded-2xl bg-[#DFEFFF]">
                   <img class="w-8" src="./assets/police.png" alt="" />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">পুলিশ</h2>
               <p class="text-lg text-[#5c5c5c]">Police</p>
@@ -159,7 +159,7 @@
                 <figure class="p-3.5 rounded-2xl bg-[#FFE3E2]">
                   <img class="w-8" src="./assets/fire-service.png" alt="" />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">ফায়ার সার্ভিস</h2>
               <p class="text-lg text-[#5c5c5c]">Fire Service</p>
@@ -193,7 +193,7 @@
                 <figure class="p-3.5 rounded-2xl bg-[#FFE3E2]">
                   <img class="w-8" src="./assets/ambulance.png" alt="" />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">অ্যাম্বুলেন্স</h2>
               <p class="text-lg text-[#5c5c5c]">Ambulance</p>
@@ -227,7 +227,7 @@
                 <figure class="p-3.5 rounded-2xl bg-[#FFE3E2]">
                   <img class="w-8" src="./assets/emergency.png" alt="" />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">নারী ও শিশু সহায়তা</h2>
               <p class="text-lg text-[#5c5c5c]">Women & Child Helpline</p>
@@ -261,7 +261,7 @@
                 <figure class="p-3.5 rounded-2xl bg-[#FFE3E2]">
                   <img class="w-8" src="./assets/emergency.png" alt="" />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">দুদক</h2>
               <p class="text-lg text-[#5c5c5c]">Anti-Corruption</p>
@@ -269,7 +269,7 @@
               <p
                 class="py-1.5 px-4 bg-[#f2f2f2] rounded-full inline-block mt-1 text-[#5c5c5c] mb-6"
               >
-                সরকারি 
+                সরকারি
               </p>
 
               <div class="flex">
@@ -295,7 +295,7 @@
                 <figure class="p-3.5 rounded-2xl bg-[#FFE3E2]">
                   <img class="w-8" src="./assets/emergency.png" alt="" />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">বিদ্যুৎ বিভ্রাট</h2>
               <p class="text-lg text-[#5c5c5c]">Electricity Outage</p>
@@ -329,7 +329,7 @@
                 <figure class="p-3.5 rounded-2xl bg-[#ffe3e2ad]">
                   <img class="w-8" src="./assets/brac.png" alt="" />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">ব্র্যাক</h2>
               <p class="text-lg text-[#5c5c5c]">Brac</p>
@@ -361,9 +361,13 @@
             >
               <div class="flex justify-between items-center mb-4">
                 <figure class="p-3.5 rounded-2xl bg-[#a14c1438]">
-                  <img class="w-8" src="./assets/Bangladesh-Railway.png" alt="" />
+                  <img
+                    class="w-8"
+                    src="./assets/Bangladesh-Railway.png"
+                    alt=""
+                  />
                 </figure>
-                <i class="fa-regular fa-heart text-3xl text-gray-500"></i>
+                <i class="fa-regular fa-heart text-3xl cart-love text-gray-500"></i>
               </div>
               <h2 class="text-2xl font-bold">বাংলাদেশ রেলওয়ে</h2>
               <p class="text-lg text-[#5c5c5c]">Bangladesh Railway</p>
