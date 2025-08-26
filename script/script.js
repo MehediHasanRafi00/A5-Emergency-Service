@@ -11,7 +11,7 @@ getElement("card-container").addEventListener("click", function (e) {
   }
 });
 
-//Call Buttons Function
+//Call Buttons & Call History Section Function
 getElement("card-container").addEventListener("click", function (e) {
   if (e.target.className.includes("call-btn")) {
     const callBtn = e.target;
@@ -63,4 +63,27 @@ getElement("card-container").addEventListener("click", function (e) {
 getElement("history-clear").addEventListener("click", function () {
   const callHistoryContainer = getElement("call-history-container");
   callHistoryContainer.innerHTML = "";
+});
+
+// Copy Function
+
+getElement("card-container").addEventListener("click", function (e) {
+  if (e.target.className.includes("copy-btn")) {
+    const copyBtn = e.target;
+    const phoneNumber = copyBtn.parentNode.parentNode.children[3].innerText;
+    
+    navigator.clipboard.writeText(phoneNumber);
+
+    alert(`
+        নম্বর কপি হয়েছে : ${phoneNumber}
+        `)
+
+    const copyCount = getElement("copy-count").innerText;
+
+    const currentCopyCount = Number(copyCount) + 1;
+
+    getElement("copy-count").innerText = currentCopyCount;
+
+    
+  }
 });
