@@ -17,7 +17,7 @@ getElement("card-container").addEventListener("click", function (e) {
     const callBtn = e.target;
 
     const coinCount = getElement("coin-count").innerText;
-    if (coinCount <= 0) {
+    if (Number(coinCount) < 20) {
       alert("❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে ২০ কয়েন লাগবে।");
       return;
     }
@@ -64,7 +64,7 @@ getElement("card-container").addEventListener("click", function (e) {
     navigator.clipboard.writeText(phoneNumber);
 
     alert(`
-        নম্বর কপি হয়েছে : ${phoneNumber}
+       📋 নম্বর কপি হয়েছে : ${phoneNumber}
         `);
 
     const copyCount = getElement("copy-count").innerText;
