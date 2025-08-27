@@ -2,17 +2,17 @@ function getElement(id) {
   return (element = document.getElementById(id));
 }
 
-//Heart Icons Function
+
+
 getElement("card-container").addEventListener("click", function (e) {
+  //Heart Icons Function
   if (e.target.className.includes("cart-love")) {
     const hartCount = getElement("hart-count").innerText;
     const currentHartCount = Number(hartCount) + 1;
     getElement("hart-count").innerText = currentHartCount;
   }
-});
 
-//Call Buttons & Call History Section Function
-getElement("card-container").addEventListener("click", function (e) {
+  //Call Buttons & Call History Section Function
   if (e.target.className.includes("call-btn")) {
     const callBtn = e.target;
 
@@ -56,6 +56,23 @@ getElement("card-container").addEventListener("click", function (e) {
     `;
     callHistoryContainer.append(newCallHistory);
   }
+  // Copy Function
+  if (e.target.className.includes("copy-btn")) {
+    const copyBtn = e.target;
+    const phoneNumber = copyBtn.parentNode.parentNode.children[3].innerText;
+
+    navigator.clipboard.writeText(phoneNumber);
+
+    alert(`
+        নম্বর কপি হয়েছে : ${phoneNumber}
+        `);
+
+    const copyCount = getElement("copy-count").innerText;
+
+    const currentCopyCount = Number(copyCount) + 1;
+
+    getElement("copy-count").innerText = currentCopyCount;
+  }
 });
 
 // History Clear Function
@@ -65,25 +82,4 @@ getElement("history-clear").addEventListener("click", function () {
   callHistoryContainer.innerHTML = "";
 });
 
-// Copy Function
 
-getElement("card-container").addEventListener("click", function (e) {
-  if (e.target.className.includes("copy-btn")) {
-    const copyBtn = e.target;
-    const phoneNumber = copyBtn.parentNode.parentNode.children[3].innerText;
-    
-    navigator.clipboard.writeText(phoneNumber);
-
-    alert(`
-        নম্বর কপি হয়েছে : ${phoneNumber}
-        `)
-
-    const copyCount = getElement("copy-count").innerText;
-
-    const currentCopyCount = Number(copyCount) + 1;
-
-    getElement("copy-count").innerText = currentCopyCount;
-
-    
-  }
-});

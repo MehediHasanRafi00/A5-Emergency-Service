@@ -3,7 +3,7 @@
 - getElementById returns only an element with the specified ID.
 - getElementsByClassName returns an array-like object of all child elements of the specified ClassName.
 - querySelector returns the first element of the specified css selector
-  -querySelectorAll returns a static nodelist of all elements that match a CSS selector.
+- querySelectorAll returns a static nodelist of all elements that match a CSS selector.
 
 ### 2. How do you create and insert a new element into the DOM?
 
